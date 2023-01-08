@@ -1,0 +1,84 @@
+<%- include("partials/header") -%>
+
+<body class="bg-purple">
+
+<center>
+<h1 style="color: rgba(255, 255, 255, 0.784);">CAESER CIPHER PUBLISHER</h1>
+</center> <br> <br> <br>
+
+<div class="shadow"> 
+<center>
+<form action="/encrypt" method="POST">
+    <label for="message" style="color: rgba(255, 255, 255, 0.554);">Pass the message here</label> <br>
+    <input type="text" name="message" autocomplete="off" class="form-control-sm form-rounded"> <br>
+    <button type="submit" class="btn-go-home">SEND</button>
+
+</form> <br>
+</center>
+
+<center><h3 style="color: rgba(255, 255, 255, 0.784);"> ENCRYPTED MESSAGE:</h3></center>
+ 
+<center style="color: rgba(255, 255, 255, 0.784);">- <%= encrypted_msg %> -</center>
+
+<center><h3 style="color: rgba(255, 255, 255, 0.784);">ORIGINAL MESSAGE:</h3></center>
+
+
+
+<center style="color: rgba(255, 255, 255, 0.784);">- <%= decrypted_msg %>  -</center>
+
+
+</div>
+</body>
+
+<style>
+    .bg-purple{
+        background: url(http://salehriaz.com/404Page/img/bg_purple.png);
+        background-repeat: repeat-x;
+        background-size: cover;
+        background-position: left top;
+        height: 100%;
+        overflow: hidden;
+        
+    }
+
+
+.btn-go-home{
+    position: relative;
+    z-index: 200;
+    margin: 15px auto;
+    width: 100px;
+    padding: 10px 15px;
+    border: 1px solid #FFCB39;
+    border-radius: 100px;
+    font-weight: 400;
+    display: block;
+    color: rgb(6, 1, 1);
+    text-align: center;
+    text-decoration: none;
+    letter-spacing : 2px;
+    font-size: 11px;
+    
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+.btn-go-home:hover{
+    background-color: #FFCB39;
+    color: rgba(255, 255, 255, 0.756);
+    transform: scale(1.05);
+    box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
+}
+
+.form-rounded {
+    border-radius: 1rem;
+    }
+
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+</style>
+
+<%- include("partials/footer") -%>
