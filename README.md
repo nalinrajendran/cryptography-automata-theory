@@ -11,7 +11,7 @@ This application is built in the perspective of a turing machine.
 ## How to Run the file:
 
 - Navigate to the project directory and run the below command to install the dependencies in the package.json file.
-### npm i
+### npm -i
 
 - Once after the dependencies are installed, we could start the development server either by using node or nodemon.
 ### nodemon app.js
